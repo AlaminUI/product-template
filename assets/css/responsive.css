@@ -1,0 +1,198 @@
+
+/* ***Responsive media query*** */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width:1500px){ 
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px){ 
+    .col-md-10 {
+        max-width: 100%;
+    }
+    
+    .col-md-3 {
+        max-width: 100%;
+    }
+    
+    .row {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .rating {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 20px;
+    }
+    
+    .product-card {
+        padding-top: 44px;
+        grid-template-areas:
+            'product-image descriptions price-card';
+        grid-template-columns: unset;
+        margin-right: 0;
+    }
+    
+    .best-overall {
+        top: -23px;
+        left: 0px;
+    }
+    
+    .product-img {
+        grid-area: product-image;
+        padding-left: 0;
+        width: 150px;
+    }
+    
+    .product-descriptions {
+        grid-area: descriptions;
+        border-right: 1px solid rgba(0,0,0,.125);
+        border-left: 1px solid rgba(0,0,0,.125);
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-right: 10px;
+        padding-top: 28px;
+    }
+    
+    .product-logo {
+        position: absolute;
+        left: 180px;
+        top: 42px;
+    }
+    
+    .price-card {
+        grid-area: price-card;
+    }
+    
+    .product-logo img {
+        max-width: 102px;
+    }
+    
+    .container {
+        max-width: 768px;
+    }
+    
+    .best-overall span:before {
+        display: none;
+    }
+    
+ 
+    
+    .best-overall span:after {
+        background: 0 0;
+        border-left: 16px solid #18b9fe;
+        border-top: 26px solid transparent;
+        height: 0;
+        right: -37px;
+        top: -1px;
+    }
+    
+    .best-overall span {
+        font-size: 15px;
+        padding: 4px 7px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .ranking h4 {
+        font-size: 18px;
+         
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+ 
+}
+
+/* Extra small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .ranking-wrap {
+        grid-template-columns: auto auto;
+    }
+    h2.h2-big {
+        font-size: 30px;
+     
+    }
+    .price-card {
+        width: 100%;
+        border-top: 1px solid rgba(0,0,0,.125);
+    }
+    
+    .product-card {
+        grid-template-areas:
+            'product-image descriptions'
+            'price-card price-card';
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .product-descriptions {border-right-width: 0px;padding-bottom: 16px;padding-top: 0px;}
+    
+ 
+    .price-box {
+        box-shadow: none !important;
+        border-width: 0px;
+        max-width: 200px;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+    
+    .price-box a {padding: 10px 8px;}
+    
+    .price-box img {
+        margin-top: 11px;
+    }
+    
+    .price-card p {
+        display: none;
+    }
+    
+    .product-logo {display: none;}
+    
+    h6.save {
+        padding-top: 0px;
+    }
+    
+    .rating {
+        border-image: linear-gradient(to right,#127ed8,#fff) 1;
+        padding-left: 36px;
+    }
+    .product-card:after {
+    top: 17px;
+    border-width: 0px;
+    left: 0;
+    border-right: 1px solid rgba(0,0,0,.125);
+    border-radius: 0px;
+    width: 29px;
+    height: 34px;
+}
+    h1 {
+        flex-direction: column;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) and (max-width: 399.98px) { 
+    .product-card {
+        grid-template-areas: 'product-image product-image'
+                'descriptions descriptions'
+                'price-card price-card';
+         
+    }
+    .product-descriptions {
+        border-width: 0px;
+    }
+    .product-img {
+        width: 100%;
+        margin-bottom: 23px;
+        padding: 0px 25px;
+    }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) and (max-width: 575.98px) { 
+ 
+}
