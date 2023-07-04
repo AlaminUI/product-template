@@ -172,10 +172,13 @@ h1 span {
 }
 header {
     background: #fff;
-    padding: 8px 0px;
+    padding: 0px 0px;
     margin-bottom: 32px;
+    padding-top: 8px;
 }
-
+.header-logo img {
+    max-width: 180px;
+}
 .product-card {
   display: grid;
   grid-template-columns: 168px auto 230px 185px;
@@ -229,7 +232,7 @@ a.overlay-link {
     z-index: 99;
 }
 .price-box a {
-  background: #f6ae18;
+  background: #0660a9;
   display: block;
   font-size: 22px;
   color: #fff;
@@ -374,7 +377,7 @@ span.rating-number {
 }
 
 .sidebar a {
-    background: #f6ae18;
+    background: #0660a9;
     display: block;
     font-size: 19px;
     color: #fff;
@@ -465,8 +468,9 @@ h2.h2-big {
   padding-bottom: 50px;
 }
 footer {
-  background: #515151;
+  background: #000000;
   padding: 32px 0px;
+ 
 }
 
 .footer-content {
