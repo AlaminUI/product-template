@@ -1,10 +1,9 @@
-/*font-family: 'Lato', sans-serif;
-font-family: 'Roboto', sans-serif;*/
-
+ 
 /************** Default CSS **************/
 @charset "UTF-8";
 *{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding:0;
   margin:0;
   text-rendering: optimizeLegibility!important;
@@ -25,8 +24,6 @@ a,
 .button,
 button {
   -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
@@ -75,8 +72,12 @@ h1 {
   font-weight: 500;
   line-height: 1.2;
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 14px;
 }
 
@@ -127,19 +128,25 @@ margin:0 auto;
 }
 @media (min-width: 768px){
   .col-md-10 {
-    -ms-flex: 0 0 83.333333%;
-    flex: 0 0 83.333333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.333333%;
+            flex: 0 0 83.333333%;
     max-width: 83.333333%;
 }
 .col-md-2 {
-  -ms-flex: 0 0 16.666667%;
-  flex: 0 0 16.666667%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.666667%;
+          flex: 0 0 16.666667%;
   max-width: 16.666667%;
 }
 }
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0px -15px;
 }
 /************** Default CSS End **************/
@@ -166,6 +173,8 @@ h1 span {
 .Stars::before {
   content: "★★★★★";
   letter-spacing: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(var(--star-background)), to(#d1d8db));
+  background: -o-linear-gradient(left, var(--star-background) var(--percent), #d1d8db var(--percent));
   background: linear-gradient(90deg, var(--star-background) var(--percent), #d1d8db var(--percent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -180,9 +189,12 @@ header {
     max-width: 180px;
 }
 .product-card {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 168px auto 230px 185px;
   grid-template-columns: 168px auto 230px 185px;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+          box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
   border: 1px solid rgba(0,0,0,.125);
   padding: 15px;
   position: relative;
@@ -191,24 +203,33 @@ header {
   margin-right: 24px;
   background: #fff;
 }
+
 .product-card:after {
-    counter-increment: card;
-    content: counter(card);
+    content:attr(data-number);
     width: 36px;
     height: 36px;
     border: 2px solid #127ed8;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 22px;
     font-weight: 600;
     color: #127ed8;
     position: absolute;
     top: 50%;
     left: -21px;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
+ 
 .product-img img {
   width: 100%;
   display: block;
@@ -216,7 +237,8 @@ header {
 
 .price-box {
   border: 1px solid rgba(0,0,0,.125);
-  box-shadow: 0 2px 6px rgba(0,0,0,.15)!important;
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.15)!important;
+          box-shadow: 0 2px 6px rgba(0,0,0,.15)!important;
   padding: 20px;
   text-align: center;
   padding-bottom: 14px;
@@ -247,8 +269,12 @@ a.overlay-link {
 }
 
 .product-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 20px;
   padding-left: 6px;
 }
@@ -271,8 +297,12 @@ h6.save {
     border-bottom: 2px solid #127ed8;
     width: 100%;
     height: 34px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .details h4 {
@@ -355,7 +385,8 @@ span.rating-number {
     z-index: -1;
 }
  .sidebar {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
     border: 1px solid rgba(0,0,0,.125);
     padding: 24px 16px;
     border-radius: 5px;
@@ -395,7 +426,8 @@ span.rating-number {
 
 .consider-box {
   max-width: 160px;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.08)!important;
+  -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.08)!important;
+          box-shadow: 0 .125rem .25rem rgba(0,0,0,.08)!important;
   border: 1px solid rgba(0,0,0,.125);
   margin: 0 auto;
   padding: 20px 12px;
@@ -419,9 +451,7 @@ span.rating-number {
 .content {
   margin-top: 32px;
 }
-.top-choose .product-card:after {
-  content: "1";
-}
+ 
 .top-choose h5 {
   text-align: center;
   font-size: 24px;
@@ -434,7 +464,9 @@ span.rating-number {
   margin-bottom: 24px;
 }
 .ranking-wrap {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto auto auto auto;
   grid-template-columns: auto auto auto auto;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -486,11 +518,18 @@ footer {
 }
 
 .footer-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 12px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 6px 0px;
 }
 
